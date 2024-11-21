@@ -21,11 +21,11 @@ function App() {
   }, [pwd]);
 
   return (
-    <div className="mx-auto bg-white h-screen md:flex  ">
-      <div className='sm-hidden bg-cover bg-[url("https://cdn.vectorstock.com/i/1000v/57/61/gas-station-vector-9905761.jpg")] w-2/5 m-1'>
+    <div className="mx-auto bg-white h-screen md:flex ">
+      <div className='hidden sm:block bg-cover bg-[url("https://cdn.vectorstock.com/i/1000v/57/61/gas-station-vector-9905761.jpg")] w-2/5 m-1 rounded'>
         <div className=' pt-96 pl-10'>
           <p className=' text-xl font-semibold'>The simplest way to manage<br/>your fleets Effectively.</p>
-          <p className='pt-2 '>experiece a better and reliable way to <br/>manage your fleets with Quickfill</p>
+          <p className='pt-2- '>experiece a better and reliable way to <br/>manage your fleets with Quickfill</p>
         </div>
       </div>
 
