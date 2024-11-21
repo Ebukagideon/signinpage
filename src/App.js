@@ -23,8 +23,9 @@ function App() {
   return (
     <div className="mx-auto bg-white h-screen md:flex  ">
       <div className='sm-hidden bg-cover bg-[url("https://cdn.vectorstock.com/i/1000v/57/61/gas-station-vector-9905761.jpg")] w-2/5 m-1'>
-        <div className=' mt-10'>
-          <p>The simplest way to manage</p>
+        <div className=' pt-96 pl-10'>
+          <p className=' text-xl font-semibold'>The simplest way to manage<br/>your fleets Effectively.</p>
+          <p className='pt-2 '>experiece a better and reliable way to <br/>manage your fleets with Quickfill</p>
         </div>
       </div>
 
@@ -63,13 +64,13 @@ function App() {
               <p>Remember me</p>
             </div>
             <div>
-              <p>Forgot Password</p>
+              <p className='text-green-800'>Forgot Password</p>
             </div>
           </div>
 
           <div className='w-full text-center pt-5'>
             <button disabled={!validEmail || !validPwd ? true : false} className='bg-green-900 w-full h-10 rounded text-white'>Log in</button>
-            <p>Dont have an account? <a href=""className='text-green-800'>Signup</a></p>
+            <p>Dont have an account? <a href="" className='text-green-800'>Signup</a></p>
           </div>
         </form>
       </div>
