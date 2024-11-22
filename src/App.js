@@ -21,58 +21,55 @@ function App() {
   }, [pwd]);
 
   return (
-    <div className="mx-auto bg-white h-screen md:flex ">
-      <div className='hidden sm:block bg-cover bg-[url("https://cdn.vectorstock.com/i/1000v/57/61/gas-station-vector-9905761.jpg")] w-2/5 m-1 rounded'>
-        <div className=' pt-96 pl-10'>
-          <p className=' text-xl font-semibold'>The simplest way to manage<br/>your fleets Effectively.</p>
-          <p className='pt-2- '>experiece a better and reliable way to <br/>manage your fleets with Quickfill</p>
-        </div>
+    <div className="mx-auto bg-white h-screen md:flex  text-mine">
+      <div className='hidden sm:block h-screen bg-cover w-2/5 m-1 rounded'>
+        <img src="/image/onboarding-slider.png" alt='' className='sm:h-100 object-cover '/>
       </div>
 
-      <div className="text-center justify-center flex-1 mt-32">
-        <h1 className='text-lg font-bold'>Welcome back</h1>
-        <p>Enter your details to login</p>
-        <form className='mt-5 justify-center text-left lg:pl-52 lg:pr-52 p-2 flex-col space-1'>
+      <div className="text-center flex-1 flex-col font-sans text-sm">
+        <div className='justify-center lg:mx-52 mb-30 my-32'>
           <div>
-          <p>Email Address</p>
-          <input
-          type="email"
-          id="email"
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-          required
-          aria-describedby="uidnote"
-          className='border mr-2 w-full h-10'/>
-          <input/>
+            <h1 className='text-2xl font-bold text-black'>Welcome back</h1>
+            <p>Enter your details to login</p>
           </div>
-
-          <div>
-            <p>Password</p>
-            <input
-            placeholder="Password"
-            type="password"
-            id="password"
-            onChange={(e) => setPwd(e.target.value)}
-            value={pwd}
-            required
-            aria-describedby="pwdnote"
-            className='border mr-2 w-full h-10'/>
-          </div>
-
-          <div className='flex justify-between'>
+          <form className='mt-5 text-left  p-2 flex-col space-1'>
             <div>
-              <p>Remember me</p>
-            </div>
-            <div>
-              <p className='text-green-800'>Forgot Password</p>
-            </div>
-          </div>
+              <p>Email Address</p>
+              <input
+              type="email"
+              id="email"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              required
+              aria-describedby="uidnote"
+              className='border mr-2 w-full h-10 rounded-lg p-1'
+              />
 
-          <div className='w-full text-center pt-5'>
-            <button disabled={!validEmail || !validPwd ? true : false} className='bg-green-900 w-full h-10 rounded text-white'>Log in</button>
-            <p>Dont have an account? <a href="" className='text-green-800'>Signup</a></p>
-          </div>
-        </form>
+              <p>Password</p>
+              <input
+              type="password"
+              id="password"
+              onChange={(e) => setPwd(e.target.value)}
+              value={pwd}
+              required
+              aria-describedby="pwdnote"
+              className='border mr-2 w-full h-10 rounded-lg p-1'/>
+
+              <div className='flex justify-between'>
+                <p>Remember me</p>
+                <p className='text-green-700'>Forgot Password</p>
+              </div>
+            </div>
+
+            <div className='w-full pt-5'>
+              <button disabled={!validEmail || !validPwd ? true : false} className='bg-btn w-full h-10 rounded-lg text-white'>Log in</button>
+              <p>Dont have an account? <a href="" className='text-green-700'>Signup</a></p>
+            </div>
+          </form>
+        </div>
+        <div className=' lg:px-52'>
+          <p className='text-xs'>By clicking “Login or Signup”, you assert that you have read and <br/>agreed to our Terms of Service and Privacy Policy.</p>
+        </div>
       </div>
     </div>
   );
